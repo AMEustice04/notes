@@ -1,0 +1,281 @@
+% chapter 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\begin{chapter}{The Real and Complex Number Systems}
+
+% section 1.1 ------------------------------------------------------------------
+\begin{section}{Dedekind Cuts}
+\label{sec:dedekind-cuts}
+	Assume a conception of first-order logic, the axioms of ZFC, and a 
+	construction of the totally ordered field $(\mathbb{Q}, +, \cdot, \leq)$. 
+
+	\begin{definition}
+	\label{def:cut}
+		Let $\alpha$ be a subset of $\mathbb{Q}$. It is a \textbf{cut} if
+		\begin{enumerate}[label=\Roman*.]
+			\item $(\alpha \neq \varnothing \land \alpha \neq \mathbb{Q})$;
+			\item $\forall p \in \alpha : q \in \mathbb{Q} : (q < p \implies q \in
+				\alpha)$;
+			\item $\forall p \in \alpha : \exists q \in \alpha : p < q$.
+		\end{enumerate}
+		We denote the set of all cuts by $\mathbb{R}$.
+	\end{definition}
+
+	\begin{definition}
+	\label{def:upper-number}
+		Let $\alpha \in \mathbb{R}$ and $q \in \mathbb{Q}$. If $q \nin
+		\alpha$, it is called an \textbf{upper number} of $\alpha$.
+	\end{definition}
+
+	\begin{theorem}
+	\label{thm:cut-upper-number-inequality}
+		Let $\alpha \in \mathbb{R}$. Then
+		\[ \forall p \in \alpha : q \in \mathbb{Q} :
+			(q \nin \alpha \implies p < q). \] 
+	\end{theorem}
+
+	\begin{proof}
+		This follows from the contrapositive of part II of definition~\ref{def:cut}
+		and $q \nin \alpha$.
+	\end{proof}
+
+	\begin{theorem}
+	\label{thm:rational-least-upper-number}
+		Let $r \in \mathbb{Q}$ and
+		\[ \alpha = \{p \in \mathbb{Q} : p < r\}. \] 
+		Then $\alpha$ is a cut and $r$ is its least upper number.
+	\end{theorem}
+
+	\begin{proof}
+		As $r - 1 \in \alpha$ and $r \nin \alpha$, part I of
+		definition~\ref{def:cut} is satisfied, and part II follows from the
+		transitivity of $\leq$ and the definition of $\alpha$. The
+		satisfaction of part III can be seen by taking $\frac{p + r}{2}$ for any
+		$p \in \alpha$. Finally, $r$'s being the least upper number of
+		$\alpha$ is a consequence of every smaller number being in $\alpha$,
+		and hence not an upper number.
+	\end{proof}
+
+	\begin{definition}
+	\label{def:rational cut}
+		Let $r \in \mathbb{Q}$. Its associated \textbf{rational cut} is
+		\[ r^* = \{p \in \mathbb{Q} : p < r\}. \] 
+	\end{definition}
+
+	\begin{definition}
+	\label{def:cut-equality}
+		Let $\alpha$, $\beta \in \mathbb{R}$. Then $\alpha = \beta$ if they are
+		equal sets.
+	\end{definition}
+
+	\begin{definition}
+	\label{def:cut-inequality}
+		Let $\alpha$, $\beta \in \mathbb{R}$. Then
+		\[ (\alpha < \beta \iff \exists p \in \beta : p \nin \alpha). \] 
+		If $0^* < \alpha$, then $\alpha$ is \textbf{positive}; if $0^* \leq
+		\alpha$, then it is \textbf{non-negative}. Similarly, if $\alpha <
+		0^*$, then $\alpha$ is \textbf{negative}, and if $\alpha \leq 0^*$,
+		then it is \textbf{non-positive}.
+	\end{definition}
+
+	\begin{theorem}
+	\label{thm:trichotomy}
+		Let $\alpha$, $\beta \in \mathbb{R}$. Then $\alpha = \beta \oplus \alpha
+		< \beta \oplus \beta < \alpha$.
+	\end{theorem}
+
+	\begin{proof}
+		This follows directly from the axiom of extensionality and the mutual
+		exclusivity of the latter two statements by way of
+		theorem~\ref{thm:cut-upper-number-inequality} and
+		the trichotomy of $\mathbb{Q}$.
+	\end{proof}
+
+	\begin{theorem}
+	\label{thm:inequality-transitivity}
+		Let $\alpha$, $beta$, $\gamma \in \mathbb{R}$. Then
+		\[ ((\alpha < \beta \land \beta < \gamma) \implies \alpha < \gamma). \] 	
+	\end{theorem}
+
+	\begin{proof}
+		As $\alpha < \beta$, there exists $p \in \mathbb{Q}$ such that $p \in
+		\beta$ and $p \nin \alpha$; and because $\beta < \gamma$, there
+		exists $q \in \mathbb{Q}$ such that $q \in \gamma$ and $q \nin
+		\beta$. By theorem~\ref{thm:cut-upper-number-inequality}, $p < q$. Now,
+		we must have $q \nin \alpha$, as otherwise property II of
+		definition~\ref{def:cut} would imply $p \in \alpha$. Thus, by
+		definition~\ref{def:cut-inequality}, we have that $\alpha < \gamma$.
+	\end{proof}
+
+	\begin{theorem}
+	\label{thm:cut-addition-closure}
+		Let $\alpha$, $\beta \in \mathbb{R}$ and
+		\[ \gamma = \{r : r \in \mathbb{Q} : \exists p \in \mathbb{Q}
+			: \exists q \in \mathbb{Q} : r = p + q\}. \] 
+		Then $\gamma$ is a cut.
+	\end{theorem}
+
+	\begin{proof}
+		As $\alpha \neq \varnothing$ and $\beta \neq \varnothing$ (by part I of
+		definition~\ref{def:cut}), there exist $p$, $q \in \mathbb{Q}$ such that
+		$p \in \alpha$ and $q \in \beta$. So, $p + q \in \gamma$, meaning
+		$\gamma \neq \varnothing$. However, as $\alpha \neq \mathbb{Q}$ and
+		$\beta \neq \mathbb{Q}$ (by the aforementioned property), there exist
+		$s$, $t \in \mathbb{Q}$ such that $s \nin \alpha$ and $t \nin \beta$.
+		According to theorem~\ref{thm:cut-upper-number-inequality}, $s + t > p +
+		q$ for all $p \in \alpha$ and $q \in \beta$, so $s + t \nin \gamma$.
+		Hence, $\gamma \neq \mathbb{Q}$, and part I of definition~\ref{def:cut}
+		is satisfied. \\
+
+		To show the satisfaction of part II, let $r \in \gamma$ and $s \in
+		\mathbb{Q}$ such that $s < r$. As $r \in \gamma$, we have $r = p +
+		q$ for some $p \in \alpha$ and $q \in \beta$. Similarly, note that $s
+		= (s - q) + q$. Because $s < r$, we have $s - q < p$, and so $s - q
+		\in \alpha$ by part II of definition~\ref{def:cut}. Since $s$ can be
+		written as the sum of elements from $\alpha$ and $\beta$, we have $s
+		\in \gamma$. Hence, part II is satisfied. \\
+
+		Finally, to see that part III is fulfilled, let $r \in \gamma$. Then $r 
+		= p + q$ for some $p \in \alpha$ and $q \in \beta$. From part III of
+		definition~\ref{def:cut}, there exists $s \in \alpha$ such that $p <
+		s$, from which we get $s + q \in \gamma$ and $r < s + q$. Thus, part
+		III is satisfied and $\gamma$ is a cut.
+	\end{proof}
+
+	\begin{definition}
+		\label{def:cut-addition}
+		Let $\alpha$, $\beta \in \mathbb{R}$. Then $+ \colon \mathbb{R} \times
+		\mathbb{R} \to \mathbb{R}$ is a binary operation such that
+		\[ \alpha + \beta = \{r : r \in \mathbb{Q} : \exists p \in \alpha
+			: q \in \beta\}. \] 
+	\end{definition}
+
+	\begin{theorem}
+		\label{thm:cut-addition-commutativity}
+		Let $\alpha$, $\beta \in \mathbb{R}$. Then $\alpha + \beta = \beta +
+		\alpha$.
+	\end{theorem}
+
+	\begin{proof}
+		\begin{align*}
+			\alpha + \beta
+			&= \{p + q : p \in \alpha : q \in \beta\} \\
+			&= \{q + p : p \in \alpha : q \in \beta\} \\
+			&= \{q + p : q \in \beta : p \in \alpha\} \\
+			&= \beta + \alpha \qedhere
+		\end{align*}
+	\end{proof}
+
+	\begin{theorem}
+		\label{thm:cut-addition-associativity}
+		Let $\alpha$, $\beta$, $\gamma \in \mathbb{R}$. Then $(\alpha + \beta) + 
+		\gamma = \alpha + (\beta + \gamma)$.
+	\end{theorem}
+
+	\begin{proof}
+		Let $r \in (\alpha + \beta) + \gamma$. Then $r = p + q$ for some $p
+		\in \alpha + \beta$ and $q \in \gamma$; and as $p \in \alpha + \beta$,
+		we have $p = s + t$ for some $s \in \alpha$ and $t \in \beta$. So,
+		$r = s + (t + q)$, and since $t + q \in \beta + \gamma$, we have that
+		$r \in \alpha + (\beta + \gamma)$. A similar argument can be made to show
+		that every element of $\alpha + (\beta + \gamma)$ is in $(\alpha +
+		\beta) + \gamma$. Thus, by definition~\ref{def:cut-equality}, the two cuts
+		are equal.
+	\end{proof}
+
+	\begin{theorem}
+		\label{thm:cut-additive-identity}
+		Let $\alpha \in \mathbb{R}$. Then $\alpha + 0^* = \alpha$.
+	\end{theorem}
+
+	\begin{proof}
+		Let $r \in \alpha + 0^*$. Then $r = p + q$ for some $p \in \alpha$
+		and $q \in 0^*$. As $q < 0$, we have that $r < p$, and so $r \in
+		\alpha$. Similarly, if $r \in \alpha$, by part III of
+		definition~\ref{def:cut}, there exists $s \in \alpha$ such that $r <
+		s$. Put $q = r - s$. Then $q < 0$ so $q \in 0^*$, and since $r = s
+		+ q$, we have that $r \in \alpha + 0^*$. Thus, by
+		definition~\ref{def:cut-equality}, the two cuts are equal.
+	\end{proof}
+
+	\begin{theorem}
+		\label{thm:exists-cut-rational-difference}
+		Let $\alpha \in \mathbb{R}$ and $r \in \mathbb{Q}^+$. Then there exist 
+		$p$, $q \in \mathbb{Q}$ such that $p \in \alpha$, $q \nin \alpha$, $q
+		\neq \sup(\alpha)$, and $q - p = r$.
+	\end{theorem}
+
+	\begin{proof}
+		Let $s \in \alpha$ and $s_n = s + n r$ for $n \in \mathbb{Z}^{\geq
+		0}$. By the well-ordering principle, there exists unique $m \in \mathbb{Z}
+		^{\geq 0}$ such that $s_m \in \alpha$ and $s_{m + 1} \nin \alpha$. If
+		$s_{m + 1} \neq \sup(\alpha)$, then take $p = s_m$ and $q = s_{m +
+		1}$. Otherwise, take $p = s_m + \frac{r}{2}$ and $q = s_{m + 1} +
+		\frac{r}{2}$.
+	\end{proof}
+
+	\begin{theorem}
+		\label{thm:cut-additive-inverse-exists}
+		Let $\alpha \in \mathbb{R}$ and
+		\[ \gamma = \{p : p \in \mathbb{Q} : (-p \nin \alpha \land -p \neq
+			\sup(\alpha))\}. \] 
+		Then $\gamma$ is a cut and $\alpha + \gamma = 0^*$.
+	\end{theorem}
+
+	\begin{proof}
+		Because $\alpha \neq \mathbb{Q}$ (by part I of definition~\ref{def:cut}),
+		there exists $p \in \mathbb{Q}$ such that $p \nin \alpha$. Since $p +
+		1 \nin \alpha$ and $p + 1 \neq \sup(\alpha)$, we have that $-(p + 1)
+		\in \gamma$, meaning $\gamma \neq \varnothing$. However, as there also
+		exists $r \in \alpha$ (by the aforementioned property), we have that $r
+		\nin \gamma$, and so $\gamma \neq \mathbb{Q}$. Hence, part I of
+		definition~\ref{def:cut} is satisfied. \\
+
+		Proving that part II is met, let $p \in \gamma$ and $r \in \mathbb{Q}$
+		such that $r < p$. As $p \in \gamma$, $-p \nin \alpha$; combining
+		that with $-p < -r$ means that $-r \nin \alpha$ and $-r \neq
+		\sup(\alpha)$, so $-r \in \gamma$. Hence, part II is satisfied. \\
+
+		Finally, to see the fulfillment of part III, let $p \in \gamma$. By
+		definition, $-p \nin \alpha$ and $-p \neq \sup(\alpha)$. The latter
+		implies there exists $q \in \mathbb{Q}$ such that $-q \nin \alpha$ and
+		$-q < -p$. Note that for $r = \frac{p + q}{2}$, $-q < -r$, and so $
+		r \nin \alpha$ and $-r \neq \sup(\alpha)$, meaning $r \in \gamma$.
+		Hence, part III is satisfied. \\
+
+		\newpage
+
+		Now, suppose $r \in \alpha + \gamma$. Then $r = p + q$ for some $p \in 
+		\alpha$ and $q \in \gamma$; and since $q \in \gamma$, $-q \nin
+		\alpha$, which by theorem~\ref{thm:cut-upper-number-inequality} means $p
+		< -q$. This yields $p + q < 0$, so $r \in 0^*$. Similarly, if $r \in
+		0^*$, then $r < 0$, so $0 < -r$. By
+		theorem~\ref{thm:exists-cut-rational-difference}, there exist $p$, $q \in
+		\alpha$ such that $p \in \alpha$, $q \nin \alpha$, $q \neq
+		\sup(\alpha)$, and $q - p = -r$.
+		Because $-q \in \gamma$, deriving $r = p + (-q)$ implies $r \in \alpha
+		+ \gamma$. Thus, by definition~\ref{def:cut-equality}, the two cuts are
+		equal. \\
+
+		The uniqueness of $\gamma$ as the inverse of $\alpha$ for $+$ follows 
+		from the associativity of $+$.
+	\end{proof}
+
+	\begin{definition}
+		\label{def:cut-additive-inverse}
+		Let $\alpha \in \mathbb{Q}$. Then the inverse of $\alpha$ for $+$ is
+		\[ -\alpha = \{p : p \in \mathbb{Q} : (-p \nin \alpha \land -p \neq 
+		\sup(\alpha))\}. \] 
+	\end{definition}
+
+	\begin{theorem}
+		\label{thm:}
+		Let $\alpha$, $\beta$, $\gamma \in \mathbb{R}$ such that $\beta < \gamma$. 
+		Then $\alpha + \beta < \alpha + \gamma$.
+	\end{theorem}
+
+	\begin{proof}
+		By theorem~\ref{thm:trichotomy}, 
+	\end{proof}
+
+\end{section}
+	
+\end{chapter}
