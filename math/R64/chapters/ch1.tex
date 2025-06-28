@@ -1,4 +1,4 @@
-% chapter 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+%o chapter 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 \begin{chapter}{The Real and Complex Number Systems}
 
 % section 1.1 ------------------------------------------------------------------
@@ -12,8 +12,8 @@
 		Let $\alpha$ be a subset of $\mathbb{Q}$. It is a \textbf{cut} if
 		\begin{enumerate}[label=\Roman*.]
 			\item $(\alpha \neq \varnothing \land \alpha \neq \mathbb{Q})$;
-			\item $\forall p \in \alpha : q \in \mathbb{Q} : (q < p \implies q \in
-				\alpha)$;
+			\item $\forall p \in \alpha : \forall q \in \mathbb{Q} :
+				(q < p \implies q \in \alpha)$;
 			\item $\forall p \in \alpha : \exists q \in \alpha : p < q$.
 		\end{enumerate}
 		We denote the set of all cuts by $\mathbb{R}$.
@@ -28,7 +28,7 @@
 	\begin{theorem}
 	\label{thm:cut-upper-number-inequality}
 		Let $\alpha \in \mathbb{R}$. Then
-		\[ \forall p \in \alpha : q \in \mathbb{Q} :
+		\[ \forall p \in \alpha : \forall q \in \mathbb{Q} :
 			(q \nin \alpha \implies p < q). \] 
 	\end{theorem}
 
@@ -91,7 +91,7 @@
 
 	\begin{theorem}
 	\label{thm:inequality-transitivity}
-		Let $\alpha$, $beta$, $\gamma \in \mathbb{R}$. Then
+		Let $\alpha$, $\beta$, $\gamma \in \mathbb{R}$. Then
 		\[ ((\alpha < \beta \land \beta < \gamma) \implies \alpha < \gamma). \] 	
 	\end{theorem}
 
@@ -100,7 +100,7 @@
 		\beta$ and $p \nin \alpha$; and because $\beta < \gamma$, there
 		exists $q \in \mathbb{Q}$ such that $q \in \gamma$ and $q \nin
 		\beta$. By theorem~\ref{thm:cut-upper-number-inequality}, $p < q$. Now,
-		we must have $q \nin \alpha$, as otherwise property II of
+		we must have $q \nin \alpha$, as otherwise part II of
 		definition~\ref{def:cut} would imply $p \in \alpha$. Thus, by
 		definition~\ref{def:cut-inequality}, we have that $\alpha < \gamma$.
 	\end{proof}
@@ -144,8 +144,8 @@
 		\label{def:cut-addition}
 		Let $\alpha$, $\beta \in \mathbb{R}$. Then $+ \colon \mathbb{R} \times
 		\mathbb{R} \to \mathbb{R}$ is a binary operation such that
-		\[ \alpha + \beta = \{r : r \in \mathbb{Q} : \exists p \in \alpha
-			: q \in \beta\}. \] 
+		\[ \gamma = \{r : r \in \mathbb{Q} : \exists p \in \mathbb{Q}
+			: \exists q \in \mathbb{Q} : r = p + q\}. \] 
 	\end{definition}
 
 	\begin{theorem}
@@ -155,13 +155,8 @@
 	\end{theorem}
 
 	\begin{proof}
-		\begin{align*}
-			\alpha + \beta
-			&= \{p + q : p \in \alpha : q \in \beta\} \\
-			&= \{q + p : p \in \alpha : q \in \beta\} \\
-			&= \{q + p : q \in \beta : p \in \alpha\} \\
-			&= \beta + \alpha \qedhere
-		\end{align*}
+		This follows from the axiom of specification and repeated uses of universal
+		introduction and universal generalization.
 	\end{proof}
 
 	\begin{theorem}
@@ -188,11 +183,11 @@
 
 	\begin{proof}
 		Let $r \in \alpha + 0^*$. Then $r = p + q$ for some $p \in \alpha$
-		and $q \in 0^*$. As $q < 0$, we have that $r < p$, and so $r \in
-		\alpha$. Similarly, if $r \in \alpha$, by part III of
-		definition~\ref{def:cut}, there exists $s \in \alpha$ such that $r <
-		s$. Put $q = r - s$. Then $q < 0$ so $q \in 0^*$, and since $r = s
-		+ q$, we have that $r \in \alpha + 0^*$. Thus, by
+		and $q \in 0^*$. As $q < 0$, we have that $r < p$, and so $r \in \alpha$ by
+		part II of definition~\ref{def:cut}. Similarly, if $r \in \alpha$, by part III
+		of the same, there exists $s \in \alpha$ such that
+		$r < s$. Put $q = r - s$. Then $q < 0$ so $q \in 0^*$, and since
+		$r = s + q$, we have that $r \in \alpha + 0^*$. Thus, by
 		definition~\ref{def:cut-equality}, the two cuts are equal.
 	\end{proof}
 

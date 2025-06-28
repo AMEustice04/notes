@@ -1,0 +1,5 @@
+1. The Eight Queens Problem
+	Look into solving it using mathematical  techniques; look into:
+	* _Gauss and the Eight Queens Problem_ (Campbell)
+	* _On the Problem of the Eight Queens_ (Glashier)
+	* _The number of n-Queens Configurations_ (Simkin)
