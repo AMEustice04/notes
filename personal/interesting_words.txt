@@ -1,52 +1,95 @@
+abstruse
+	Difficult to understand.
 accoutrement
 	An accessory item of equipment or dress; outward forms of recognition.
+alackaday
+	An exclamation expressing sorrow.
+anagnorisis
+	The moment in the plot of a drama in which the hero makes a discovery that
+	explains previously unexplained events or situations.
+aplomb
+	Self-confidence; poise.
 apopolexy
 	A fit of extreme anger; a stroke.
+asparaginous
+	Pertaining to, or resembling, asparagus.
+bedraggled
+	Decaying, decrepit, or dilapidated.
 caparison
 	An ornamental covering for a horse, or for its saddle or harness.
 causeway
 	A road on the upper point of an embankment across a low or wet place, or piece
 	of water.
+catalepsy
+	A neurological condition characterized by muscular rigidity and fixity of
+	posture, as well as decreased sensitivity to pain.
 cavalcade
 	A procession of rider or horse-drawn carriages.
+coextensive
+	Having the same limits, boundaries or scope.
 come down in the last shower
 	To be born yesterday.
+complect
+	Intertwine, embrace.
 confute
 	To prove to be wrong or in error; to silence
 connivent
 	Converging and touching but not fused; forbearing to see.
+contradistinctive
+	Distinction by contrast.
 corium
 	A lava-like material created in a nuclear reactor core during a meltdown.
 cortege
 	A train of attendants, as of a distinguished person; a funeral procession.
 coruscation
 	A sudden flash of light; an unexpected gleam of brilliance.
+countermand
+	To cancel or reverse (a previously issued command or order.)
+crepuscular
+	Of or like twilight; dim.
 cruciverbalist
 	An enthusiast of word games, especially of crosswords.
 dab hand
 	An expert.
+decenary
+	Of or related to the number ten as a base of enumeration; containing or
+	comprising ten items or units.
 de rigeur
 	Necessary according to etiquette, protocol, or fashion.
 definiendum
 	An expression that is being defined.
 definiens
 	An expression that defines.
+dislimn
+	To efface.
+dottle
+	Unburned and partially burned tobacco in the bowl of a pipe.
+efface
+	To rub or wipe out; erase; to remove or make indistinct; to conduct (oneself)
+	inconspicuously.
 effulgent
 	Shining brilliantly.
 eidolon
 	A spirit-image of a living or dead person.
 elan
 	Vigorous spirit or enthusiasm.
+elide
+	To omit or slur over (a syllable, for example) in pronunciation; to strike out
+	something written.
 elision
 	The omission of one or more sounds in a word or phrase.
 even Jove nods
 	Even experts are fallible.
+flubber
+	A rubbery polymer used as a plaything or to demonstrate physical properties.
 gaily
 	In a joyful manner.
 garret
 	A habitable attic.
 gesamkunstwerk
 	A work of art that makes use of all or many art forms.
+grandiloquent
+	Overly flowery or elaborate.
 hair of the dog (that bit you)
 	Alcohol as a hangover remedy.
 haustorium
@@ -63,6 +106,8 @@ in extremis
 	In extreme circumstances, especially at the point of death.
 inchoate
 	Being in a beginning or early stage; imperfectly formed or developed.
+insalubrious
+	Not promoting health; unwholesome.
 insensate
 	Inanimate; unconscious; unfeeling.
 joussaince
@@ -81,6 +126,8 @@ lunate
 lunette
 	A lunate or semicircular space, usually over a door or window, that may
 	contain another window, a sculpture, or a mural.
+mendacious
+	Lying; untruthful.
 minarchy
 	Government with the least necessary power over its citizens.
 minaret
@@ -89,12 +136,21 @@ minaret
 mithridatism
 	The practice of inoculating oneself against a poison by gradually
 	self-administering non-lethal amounts.
+monotropism
+	An individual's tenedency to focus their attention on a small or singular
+	number of interests at any time.
 mordant
 	Bitingly sarcastic.
 moreish
 	Causing want to have more.
+noisomely
+	Offensive to the point of arousing disgust; harmful or dangerous.
 oneirology
 	The scientific study of dreams.
+ontogeny
+	The development of an individual organism.
+over a barrel
+	In a helpless position; at someone's mercy.
 overleap
 	To defeat oneself or one's purpose by going to far; to ignore.
 parochial
@@ -102,9 +158,22 @@ parochial
 parvenu
 	A person who has suddenly risen to a higher social and economic class and has
 	not yet gained social acceptance by others in such.
+phenomenology
+	A philosophical movement, the primary aim of which is the investigation and
+	description of phenomena as consciously experienced, without theories about
+	their causal explanation and as free as possible from unexamined
+	preconceptions and presuppositions.
 pinnate
 	Resembling a feather in having parts or branches arranged on each side of a
 	common axis.
+plait
+	A braid, especially of hair.
+portcullis
+	A grating of iron or of timbers pointed with iron, hung over the gateway of a
+	fortress, to be let down to prevent the entrance of an enemy.
+problem of future contingents
+	Statements about states of affairs in the future that are contingent---neither
+	necessarily true nor necessarily false.
 prosaic
 	Consisting or characteristic of prose; matter-of-fact.
 prosthaphaeresis
@@ -117,6 +186,11 @@ punctilious
 	Precise; scrupulous.
 raison d'etre
 	The sole or ultimate purpose of something or someone.
+recapitulate
+	To repeat in a precise form; to appear to repeat the (the evolutionary stages
+	of the species) during the embryonic development of the individual organism.
+recondite
+	Not easily understood; concealed; hidden from the mental or intellectual view.
 remonstrate
 	An expression of protest, complaint, or reproof, especially a formal statement
 	of grievances; a pointing out.
@@ -126,6 +200,10 @@ retainer
 	One who is retained or kept in service; an attendant.
 reticent
 	Restrained or reserved.
+salubrious
+	Conducive or favorable to health or well-being.
+salutary
+	Effecting or designed to effect and improvement.
 servitor
 	An undergraduate who performed menial duties in exchange for financial support
 	from their college; a servant; a soldier.
@@ -137,6 +215,11 @@ snifter
 stone of madness
 	A stone in a patient's head thought to be the cause of madness, idiocy, or
 	dementia.
+sweating sickness
+	A mysterious and contagious disease that struck England and surrounding areas
+	in the 15th and 16th centuries.
+swish
+	Smart, fashionable.
 syllabary
 	A set of written characters for a language, each character representing a
 	syllable.
@@ -146,10 +229,16 @@ tabard
 teleological
 	Showing evidence of design or purpose, especially in natural phenomena;
 	relating to teleology.
+thalassa
+	The sea; the divine female personification of the sea in Greek mythology.
 transclude
 	To institute a programming step of substituting a template or other input for
 	its rendered text, such as when parsing wikitext.
 transcode
 	To convert from one encoding to another.
+turgid
+	Excessively ornate or complex in style or language; bloated.
 weltanschauung
 	A person or group's worldview.
+wholesome
+	Conducive to or indicative of good health or well-being.
